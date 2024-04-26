@@ -6,7 +6,7 @@ List of all possible sets of N = 30, where all sets are in the range of:
 
 Ctrl+F search 'sidon set' to find possible sidon sets and to check number of sidon sets and number of possible sets when N = 30.
 
-All possible sets:
+All possible sets of girth 6:
 {1, 2, 4, 8, 9, 10},
 {1, 2, 4, 8, 9, 11},
 {1, 2, 4, 8, 9, 12},
@@ -79255,6 +79255,8 @@ All possible sets:
 {1, 24, 27, 28, 29, 30},
 {1, 25, 26, 28, 29, 30},
 {1, 25, 27, 28, 29, 30},
+
+List of all sidon sets from possible sets of girth 6:
 {1, 2, 4, 8, 13, 21},
 {1, 2, 4, 8, 13, 23},
 {1, 2, 4, 8, 13, 26},
