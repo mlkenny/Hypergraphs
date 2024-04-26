@@ -34,7 +34,7 @@ file = open("setsOutput.txt", 'w')
 file.write("All possible sets have passed the sidon set property check at girth 4.\n")
 file.write("\nList of all possible sets of N = " + str(N) + ", where all sets are in the range of:\n{{1, (2, N-4), (3, N-3), (4, N-2), (5, N-1), (6, N)}}.".format() + "\n**This is truly an overcount as we only consider sets that pass the sidon set property at girth 4.**\n")
 file.write("\nCtrl+F search 'sidon set' to find possible sidon sets and to check number of sidon sets and number of possible sets when N = " + str(N) + ".\n")
-file.write("\nAll possible sets:\n") # comment this out if you are checking high N values.
+file.write("\nAll possible sets of girth 6:\n") # comment this out if you are checking high N values.
 
 # GENERATE POSSIBLE SETS
 x1 = 1
@@ -108,7 +108,7 @@ for x2 in range(2, N + 1):
 
 # CHECK IF SET IS A SIDON SET
 # the first 4 elements of the set exhibit the sidon set property; is there a way to not have to recheck those subtractions? not optimized.
-file.write("\nList of all sidon sets from possible sets:\n")
+file.write("\nList of all sidon sets from possible sets of girth 6:\n")
 for set in possibleSets:
     isSidonSet = True
     i = len(set) - 1
