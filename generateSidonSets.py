@@ -108,7 +108,7 @@ for x2 in range(2, N + 1):
 
 # CHECK IF SET IS A SIDON SET
 # the first 4 elements of the set exhibit the sidon set property; is there a way to not have to recheck those subtractions? not optimized.
-# file.write("\nList of all sidon sets from possible sets:\n")
+file.write("\nList of all sidon sets from possible sets:\n")
 for set in possibleSets:
     isSidonSet = True
     i = len(set) - 1
