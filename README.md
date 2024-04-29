@@ -25,6 +25,9 @@ Then, if the given set is a Sidon set, the set exhibits the square products prop
 you select any 4 of the elements within the Sidon set and find their differences, then multiply the product and find the
 prime factorization of the product. Looking at the prime bases, if the exponent is odd then add the base to an auxiliary set.
 
-# New Goal
+# Next Goal
 Generate a lot of sidon sets with bigger windows.
 Format: {{sidon set 1}, {sidon set 2}, ...}
+
+# Next Next Goal
+Evaluate if unioning an element to a 4 or 5 or 6 sidon set is faster than checking the entire set for the sidon condition.

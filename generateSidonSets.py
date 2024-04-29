@@ -26,7 +26,7 @@ N = 30
 # N = 30; 79,248 possible sets  -   66.7% difference
 # N = 40; 431,796 possible sets -   74.9% difference
 # N = 50; 1,525,184 possible sets   -   79.9% difference
-# N = 100; 64,363,088 possible sets
+# N = 100; 64,363,088 possible sets.
 
 # OPEN FILE
 file = open("setsOutput.txt", 'w')
