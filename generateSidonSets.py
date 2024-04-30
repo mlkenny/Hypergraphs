@@ -13,6 +13,8 @@ sidonNumber = 0
 possibleNumber = 0
 
 N = 30
+lowerBound = (1, 25, 150, 150, 250, 535)
+upperBound = (1, 40, 180, 180, 280, 555)
 ## Assume possible sets were not checked for sidon set property.
 # N = 10; 126 total possible sets; 0 sidon sets.
 # N = 20; 11,628 total possible sets; 56 sidon sets.
@@ -31,21 +33,25 @@ N = 30
 # OPEN FILE
 file = open("setsOutput.txt", 'w')
 
-file.write("All possible sets have passed the sidon set property check at girth 4.\n")
-file.write("\nList of all possible sets of N = " + str(N) + ", where all sets are in the range of:\n{{1, (2, N-4), (3, N-3), (4, N-2), (5, N-1), (6, N)}}.".format() + "\n**This is truly an overcount as we only consider sets that pass the sidon set property at girth 4.**\n")
-file.write("\nCtrl+F search 'sidon set' to find possible sidon sets and to check number of sidon sets and number of possible sets when N = " + str(N) + ".\n")
-file.write("\nAll possible sets of girth 6:\n") # comment this out if you are checking high N values.
+#file.write("All possible sets have passed the sidon set property check at girth 4.\n")
+#file.write("\nList of all possible sets of N = " + str(N) + ", where all sets are in the range of:\n{{1, (2, N-4), (3, N-3), (4, N-2), (5, N-1), (6, N)}}.".format() + "\n")
+#file.write("\nCtrl+F search 'sidon set' to find possible sidon sets and to check number of sidon sets and number of possible sets when N = " + str(N) + ".\n")
+#file.write("\nAll possible sets of girth 6:\n") # comment this out if you are checking high N values.
+
+file.write("List of all sidon sets of girth 6.\n")
+file.write("\nAll sets exist within the range of:\n" + str(lowerBound) + " to " + str(upperBound))
+file.write("\nBelonging to the general set: (x1, x2, x3, x4, x5, x6)")
 
 # GENERATE POSSIBLE SETS
 x1 = 1
-for x2 in range(2, N + 1):
-    for x3 in range(3, N + 1):
+for x2 in range(lowerBound[1], upperBound[1] + 1):
+    for x3 in range(lowerBound[2], upperBound[2] + 1):
         # check if x2 and x3 are increasing and distinct.
         # if not, then skip number.
         if x2 >= x3:
             pass
         else:
-            for x4 in range(4, N + 1):
+            for x4 in range(lowerBound[3], upperBound[3] + 1):
                 # check if x3 and x4 are increasing and distinct.
                 # if not, then skip number.
                 if x3 >= x4:
@@ -76,13 +82,13 @@ for x2 in range(2, N + 1):
                     # if not a sidon set, go to next x4.
                     if not isSidonSet:
                         continue
-                    for x5 in range(5, N + 1):
+                    for x5 in range(lowerBound[4], upperBound[4] + 1):
                         # check if x4 and x5 are increasing and distinct.
                         # if not, then skip number.
                         if x4 >= x5:
                             pass
                         else:
-                            for x6 in range(6, N + 1):
+                            for x6 in range(lowerBound[5], upperBound[5] + 1):
                                 # check if x5 and x6 are increasing and distinct.
                                 # if not, then skip number.
                                 if x5 >= x6:
@@ -93,6 +99,7 @@ for x2 in range(2, N + 1):
                                     tuple = tempTuple + (x5, x6)
                                     possibleSets.append(tuple)
                                     possibleNumber += 1
+                                    '''
                                     # WRITE POSSIBLE SETS TO FILE
                                     # comment out if using high values of N.
                                     count = len(tuple) - 1
@@ -105,6 +112,7 @@ for x2 in range(2, N + 1):
                                             string = string + str(char) + ', '
                                             count -= 1
                                     file.write(string)
+                                    '''
 
 # CHECK IF SET IS A SIDON SET
 # the first 4 elements of the set exhibit the sidon set property; is there a way to not have to recheck those subtractions? not optimized.
@@ -143,6 +151,8 @@ for set in possibleSets:
         file.write(string)
 
 # WRITE NUMERICAL DATA TO FILE
-file.write("\nThere are " + str(possibleNumber) + " possible sets that pass the sidon set property at girth 4 when N = " + str(N))
-file.write("\nThere are " + str(sidonNumber) + " sidon sets when N = " + str(N))
+#file.write("\nThere are " + str(possibleNumber) + " possible sets that pass the sidon set property at girth 4 when N = " + str(N))
+#file.write("\nThere are " + str(sidonNumber) + " sidon sets when N = " + str(N))
+file.write("\nThere are " + str(possibleNumber) + " possible sets that pass the sidon set property at girth 4")
+file.write("\nThere are " + str(sidonNumber) + " sidon sets.")
 file.close()
