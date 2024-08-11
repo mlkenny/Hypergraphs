@@ -1,0 +1,55 @@
+This file is for testing the implemtation of:
+Forming 4 Lambda Choices, Forming Positive Products, Taking only Odd Exponent Prime Factors.
+
+Testing Set: ['1', '35', '161', '170', '251', '545']
+
+Now testing all (chooseFour) combinations of four lambda choices.
+{1, 35, 161, 170},
+{1, 35, 161, 251},
+{1, 35, 161, 545},
+{1, 35, 170, 251},
+{1, 35, 170, 545},
+{1, 35, 251, 545},
+{1, 161, 170, 251},
+{1, 161, 170, 545},
+{1, 161, 251, 545},
+{1, 170, 251, 545},
+{35, 161, 170, 251},
+{35, 161, 170, 545},
+{35, 161, 251, 545},
+{35, 170, 251, 545},
+{161, 170, 251, 545},
+
+Now testing (formPositiveProducts) positive products from lambda choices.
+{459950400, 6609600},
+{1088640000, 105753600},
+{5593190400, 1065369600},
+{1232010000, 100532016},
+{6329793600, 1098922500},
+{14981760000, 1274490000},
+{34222500, 197121600},
+{317730816, 3893760000},
+{4700160000, 4515840000},
+{4131000000, 4658062500},
+{23619600, 124002900},
+{237945600, 2449440000},
+{3807129600, 3072577536},
+{3346110000, 3214890000},
+{1049760000, 89302500},
+
+Now testing (onlyOddPrimeFactors) displaying only Odd Exponent Prime Factors.
+{[3, 7], [3, 17]},
+{[3, 7], [3, 17]},
+{[3, 7], None},
+{None, [3, 17]},
+{None, None},
+{None, None},
+{None, None},
+{[3, 17], None},
+{[3, 17], None},
+{[3, 17], None},
+{None, [3, 7]},
+{[3, 17], [3, 7]},
+{[3, 17], [3, 7]},
+{[3, 17], None},
+{None, None},
