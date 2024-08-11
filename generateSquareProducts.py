@@ -163,7 +163,7 @@ def calculateScore(onlyOdds):
         list is now = [[-1, 1], [-1, 1]]
         
         # Scoring implementation below.
-        totalScore = 2
+        totalScore = len(list)
         for pair in list:
             currentScore = 1
             for index in range(0, len(pair))
