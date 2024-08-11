@@ -11,6 +11,12 @@ The ultimate goal is to reach a general formula for a hypergraph of size n; Curr
     2. Attempt to find more example sets of girth 5.
     3. If applicable, attempt to find more example sets of girth 6.
 
+# Goals Accomplished
+    1. Recreate functional hypergraph example sets of girth 3 and 4.
+    2. Recreate functional hypergraph example sets of girth 5 and 6.
+    3. Successfully implemented sidonSet condition check.
+    4. Successfully implemented squareProducts condition check.
+    
 # Functional 6-set Solution
 Consider the set {1, 35, 161, 170, 251, 545}
 
